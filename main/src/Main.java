@@ -43,7 +43,6 @@ public class Main {
         // Q11654
         int s = sc.next().charAt(0);
         System.out.println(s);
-
         sc.close();
     }
 }
