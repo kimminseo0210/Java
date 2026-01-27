@@ -41,8 +41,11 @@ public class Main {
 //        }
 
         // Q11654
-        int s = sc.next().charAt(0);
-        System.out.println(s);
+//        int s = sc.next().charAt(0);
+//        System.out.println(s);
+
+        // Q
+
         sc.close();
     }
 }
