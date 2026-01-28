@@ -1,6 +1,9 @@
+import java.io.*;
 import java.util.*;
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
         Scanner sc = new Scanner(System.in);
         // Q2438
 //        int n;
@@ -57,14 +60,46 @@ public class Main {
 //        }
 
         // Q11720
-        int numCount = sc.nextInt();
-        String numChar = sc.next();
-        int numSum = 0;
+//        int numCount = sc.nextInt();
+//        String numChar = sc.next();
+//        int numSum = 0;
+//
+//        for (int i = 0; i < numCount; i++) {
+//            numSum += numChar.charAt(i)-'0';
+//        }
+//        System.out.println(numSum);
 
-        for (int i = 0; i < numCount; i++) {
-            numSum += numChar.charAt(i);
+        // Q2562
+//        int max = 0;
+//        int index = 0;
+//        for (int i=0; i<9; i++) {
+//            int n = sc.nextInt();
+//            if (n > max) {
+//                max = n;
+//                index = i+1;
+//            }
+//        }
+//        System.out.println(max);
+//        System.out.println(index);
+
+        // Q2884
+//        int h = sc.nextInt();
+//        int m = sc.nextInt();
+//        if (m>=45) m -= 45;
+//        else {
+//            m = 60+(m-45);
+//            if (h==0) h=23;
+//            else h--;
+//        }
+//        System.out.println(h+" "+m);
+
+        // Q10250
+        int test_case = sc.nextInt();
+        for (int i=0; i<test_case; i++) {
+
+
+            System.out.println((floor*100)+(roomNumber+1));
         }
-        System.out.println(numSum);
         sc.close();
     }
 }
