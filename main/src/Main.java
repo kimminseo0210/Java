@@ -1,7 +1,8 @@
 import java.io.*;
 import java.util.*;
+
 public class Main {
-    public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Scanner sc = new Scanner(System.in);
         // Q2438
@@ -123,7 +124,6 @@ public class Main {
         // 방법 1
 //        StringTokenizer st = new StringTokenizer(br.readLine());
 //        System.out.println(st.countTokens());
-
         // 방법 2
 //        String str = sc.nextLine();
 //        int cnt = 0;
@@ -180,6 +180,8 @@ public class Main {
 //               }
 //           }
 //        }
+
+		//
         sc.close();
     }
 }
