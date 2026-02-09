@@ -181,7 +181,28 @@ public class Main {
 //           }
 //        }
 
-		//
+		// Q2920
+		// int[] asc = {1,2,3,4,5,6,7,8};
+		// int[] desc = {8,7,6,5,4,3,2,1};
+		// int[] arr = new int[8];
+		// for (int i=0; i<8; i++) {
+		// 	arr[i] = sc.nextInt();
+		// }
+		// if (Arrays.equals(arr, asc)) {
+		// 	System.out.println("ascending");
+		// } else if (Arrays.equals(arr, desc)) {
+		// 	System.out.println("descending");
+		// } else {
+		// 	System.out.println("mixed");
+		// }
+		
+		// Q3052
+		int[] arr = new int[10];
+		for (int i=0; i<arr.length; i++) {
+			int n = sc.nextInt();
+			arr[i] = n % 42;
+		}
+		System.out.println(Arrays.stream(arr).distinct().count());
         sc.close();
     }
 }
