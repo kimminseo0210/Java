@@ -1,11 +1,12 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Class1 {
 	public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Scanner sc = new Scanner(System.in);
-        // Q2438
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
+		Scanner sc = new Scanner(System.in);
+		// Q2438
 //        int n;
 //        n = sc.nextInt();
 //
@@ -15,7 +16,7 @@ public class Main {
 //            }
 //            System.out.println();
 
-        // Q1330
+		// Q1330
 //        int a = sc.nextInt();
 //        int b = sc.nextInt();
 //
@@ -27,13 +28,13 @@ public class Main {
 //            System.out.println("==");
 //        }
 
-        //Q2739
+		//Q2739
 //        int n = sc.nextInt();
 //        for(int i=1;i<10;i++){
 //            System.out.println(n+" * "+i+" = "+(n*i));
 //        }
 
-        // Q10952
+		// Q10952
 //        while (true) {
 //            int a = sc.nextInt();
 //            int b = sc.nextInt();
@@ -43,11 +44,11 @@ public class Main {
 //            System.out.println( a + b);
 //        }
 
-        // Q11654
+		// Q11654
 //        int s = sc.next().charAt(0);
 //        System.out.println(s);
 
-        // Q2439
+		// Q2439
 //        int n = sc.nextInt();
 //        for (int i=0; i<n ;i++) {
 //            for (int j=n-1; j>i; j--) {
@@ -59,7 +60,7 @@ public class Main {
 //            System.out.println();
 //        }
 
-        // Q11720
+		// Q11720
 //        int numCount = sc.nextInt();
 //        String numChar = sc.next();
 //        int numSum = 0;
@@ -69,7 +70,7 @@ public class Main {
 //        }
 //        System.out.println(numSum);
 
-        // Q2562
+		// Q2562
 //        int max = 0;
 //        int index = 0;
 //        for (int i=0; i<9; i++) {
@@ -82,7 +83,7 @@ public class Main {
 //        System.out.println(max);
 //        System.out.println(index);
 
-        // Q2884
+		// Q2884
 //        int h = sc.nextInt();
 //        int m = sc.nextInt();
 //        if (m>=45) m -= 45;
@@ -93,7 +94,7 @@ public class Main {
 //        }
 //        System.out.println(h+" "+m);
 
-        // Q10250
+		// Q10250
 //        int testCase = Integer.parseInt(br.readLine());
 //        for (int i=0; i<testCase; i++) {
 //            StringTokenizer st = new StringTokenizer(br.readLine());
@@ -103,7 +104,7 @@ public class Main {
 //            else System.out.println(n%h*100 + (n/h+1));
 //        }
 
-        // Q10818
+		// Q10818
 //        int n = Integer.parseInt(br.readLine());    // 숫자 개수
 //        // N 개의 정수 입력
 //        StringTokenizer st = new StringTokenizer(br.readLine());
@@ -120,11 +121,11 @@ public class Main {
 //        }
 //        System.out.println(min + " " + max);
 
-        // Q1152
-        // 방법 1
+		// Q1152
+		// 방법 1
 //        StringTokenizer st = new StringTokenizer(br.readLine());
 //        System.out.println(st.countTokens());
-        // 방법 2
+		// 방법 2
 //        String str = sc.nextLine();
 //        int cnt = 0;
 //
@@ -141,7 +142,7 @@ public class Main {
 //        }
 //        System.out.println(cnt);
 
-        // Q2577
+		// Q2577
 //        int a = sc.nextInt();
 //        int b = sc.nextInt();
 //        int c = sc.nextInt();
@@ -155,7 +156,7 @@ public class Main {
 //            }
 //            System.out.println(count);
 //        }
-        // 방법 2
+		// 방법 2
 //        int a = Integer.parseInt(br.readLine());
 //        int b = Integer.parseInt(br.readLine());
 //        int c = Integer.parseInt(br.readLine());
@@ -168,7 +169,7 @@ public class Main {
 //            System.out.println(count);
 //        }
 
-        // Q2675
+		// Q2675
 //        int n = sc.nextInt();
 //        for (int i=0; i<n; i++) {
 //           int r = sc.nextInt();
@@ -195,14 +196,67 @@ public class Main {
 		// } else {
 		// 	System.out.println("mixed");
 		// }
-		
+
 		// Q3052
-		int[] arr = new int[10];
-		for (int i=0; i<arr.length; i++) {
-			int n = sc.nextInt();
-			arr[i] = n % 42;
+//		int[] arr = new int[10];
+//		for (int i=0; i<arr.length; i++) {
+//			int n = sc.nextInt();
+//			arr[i] = n % 42;
+//		}
+//		System.out.println(Arrays.stream(arr).distinct().count());
+
+		// Q8958
+		// 풀이법 1
+//		int testCase = sc.nextInt();
+//		for (int i=0; i<testCase; i++) {
+//			String str = br.readLine();
+		// 풀이법 1
+//			for (int j=0; j<str.length(); j++) {
+//				int sum = 0;
+//				int score = 0;
+//				if (str.charAt(j) == 'O') {
+//					score += 1;
+//					sum += score;
+//				} else {
+//					score = 0;
+//				}
+//			}
+		// 풀이법 2 (배열방식 : toCharArray 활용)
+//			char[] arr = str.toCharArray();
+//			int sum = 0;
+//			int score = 0;
+//			for (char ch : arr) {
+//				if (ch == 'O') {
+//					score++;
+//					sum += score;
+//				} else {
+//					score = 0;
+//				}
+//			}
+//			System.out.println(sum);
+		// 풀이법 3 ( 리스트/문자열 쪼개기 방식 : split 활용)
+//			String[] clusters = str.split("X");
+//			int totalSum = 0;
+//			for (String s : clusters) {
+//				int len = s.length();
+//				totalSum += (len * (len + 1)) / 2;
+//			}
+//			System.out.println(totalSum);
+//		}
+
+		// Q10809
+		int[] arr = new int[26];
+		String str = br.readLine();
+		Arrays.fill(arr, -1);	// 배열의 모든 값을 -1로 지정
+		for (int i=0; i<str.length(); i++) {
+			char ch = str.charAt(i);
+			if (arr[ch-'a'] == -1) arr[ch-'a'] = i;
 		}
-		System.out.println(Arrays.stream(arr).distinct().count());
+		for (int val : arr) {
+			sb.append(val).append(" ");
+		}
+		System.out.println(sb.toString().trim());
+
         sc.close();
     }
 }
