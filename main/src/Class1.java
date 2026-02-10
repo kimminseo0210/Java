@@ -245,18 +245,29 @@ public class Class1 {
 //		}
 
 		// Q10809
-		int[] arr = new int[26];
-		String str = br.readLine();
-		Arrays.fill(arr, -1);	// 배열의 모든 값을 -1로 지정
-		for (int i=0; i<str.length(); i++) {
-			char ch = str.charAt(i);
-			if (arr[ch-'a'] == -1) arr[ch-'a'] = i;
-		}
-		for (int val : arr) {
-			sb.append(val).append(" ");
-		}
-		System.out.println(sb.toString().trim());
+//		int[] arr = new int[26];
+//		String str = br.readLine();
+//		Arrays.fill(arr, -1);	// 배열의 모든 값을 -1로 지정
+//		for (int i=0; i<str.length(); i++) {
+//			char ch = str.charAt(i);
+//			if (arr[ch-'a'] == -1) arr[ch-'a'] = i;
+//		}
+//		for (int val : arr) {
+//			sb.append(val).append(" ");
+//		}
+//		System.out.println(sb.toString().trim());
 
+		// Q31403
+		int a = Integer.parseInt(br.readLine());
+		int b = Integer.parseInt(br.readLine());
+		int c = Integer.parseInt(br.readLine());
+		String s = "";	// 빈문자열 생성
+		// s += (char)a의 의미 a의 아스키코드 값을 가져와서 더해라
+		s += a;	// ""에 a가 자동형변환이 되어 문자로 취급되 더해짐 -> "3"
+		s += b;	// "3"에 b가 자동형변환이 되어 문자로 취급되 더해짐 -> "34"
+
+		System.out.println(a+b-c);
+		System.out.println(Integer.parseInt(s)-c);
         sc.close();
     }
 }
