@@ -2,6 +2,9 @@ package Class2;
 import java.util.*;
 import java.io.*;
 public class Q11650_11651 /* 좌표 정렬하기 */ {
+
+
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
