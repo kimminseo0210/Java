@@ -8,21 +8,24 @@ public class Q18110 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
-        int[] list = new int[n];
+        if (n == 0)  System.out.println("0");
+        else {
 
-        for (int i=0; i<n; i++) {
-            list[i] = Integer.parseInt(br.readLine());
+            int[] list = new int[n];
+
+            for (int i = 0; i < n; i++) {
+                list[i] = Integer.parseInt(br.readLine());
+            }
+
+            Arrays.sort(list);
+
+            int cutline = (int) Math.round(n * 0.15);
+            int listLen = list.length - cutline - cutline;
+            int sum = 0;
+            for (int i = cutline; i < n - cutline; i++) {
+                sum += list[i];
+            }
+            System.out.println(Math.round((double) sum / listLen));
         }
-
-        Arrays.sort(list);
-
-        int cutline = (int) Math.round(n * 0.15);
-        int listLen = list.length - cutline - cutline;
-        int sum = 0;
-        for (int i=cutline; i<n-cutline; i++) {
-            sum += list[i];
-            System.out.println(sum);
-        }
-        System.out.println(sum/listLen);
     }
 }

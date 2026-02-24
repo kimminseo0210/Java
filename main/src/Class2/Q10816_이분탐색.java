@@ -3,7 +3,7 @@ package Class2;
 import java.io.*;
 import java.util.*;
 
-public class Q10816 {
+public class Q10816_이분탐색 /* 숫자 카드 2 */ {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
