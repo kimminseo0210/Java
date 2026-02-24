@@ -12,19 +12,8 @@ public class Q1929 {
         int n = Integer.parseInt(st.nextToken());
 
         boolean[] prime = new boolean[n+1];
-        prime[0] = false;
-        prime[1] = false;
-
-        for (int i=m; i<=n; i++) {
-            if (!seieveOfEratosthenes(i)) System.out.println(i);
-        }
-
-    }
-    static boolean seieveOfEratosthenes(int n) {
-        boolean[] prime = new boolean[n+1];
-
-        prime[0] = false;
-        prime[1] = false;
+        prime[0] = true;
+        prime[1] = true;
 
         for (int i=2; i<=Math.sqrt(n); i++) {
             if (prime[i]) {
@@ -34,6 +23,23 @@ public class Q1929 {
                 prime[j] = true;
             }
         }
-        return prime[n];
+        StringBuilder sb = new StringBuilder();
+        for (int i=m; i<=n; i++) {
+            if (!prime[i]) sb.append(i).append('\n');
+        }
+        System.out.println(sb);
     }
 }
+/** 출력 시간
+ * for문 출력 664ms
+ * StringBuilder를 이용한 출력 208ms
+ */
+/** 시간복잡도
+ *  2중 for 문
+ *  입력 최대 :1 <= m <= n <= 1,000,000
+ *  O(N log(log N))
+ *
+ *  최적화 방법
+ *  for문으로 출력을 하고있어 추후 I/O병목 가능
+ *  StringBuilder로 해결
+ */
